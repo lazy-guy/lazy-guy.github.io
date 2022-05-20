@@ -23,17 +23,14 @@ main {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: center;
 	padding: 10px 20px;
 }
 
 section {
-	width: 95%;
-	background-color: #222;
-	border-radius: 18px;
 	padding: 15px 15px;
-	margin: 30px 0;
+	margin: 10px 0;
 }
 
 section h2 {
