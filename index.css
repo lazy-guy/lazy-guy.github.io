@@ -52,6 +52,11 @@ section {
 	position: relative;
 }
 
+#kofi-link {
+	display: inline-block;
+	margin: 5px;
+}
+
 .top-section {
 	padding: 10px;
 	font-size: 18px;
