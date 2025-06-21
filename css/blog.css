@@ -1,0 +1,266 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--background-color: #ffffff;
+	--card-background-color: rgba(212, 219, 238, 0.821);
+	--table-background-color: rgba(223, 224, 236, 0);
+	--card-text-color: #333333;
+	--heading-text-color: #333333;
+	--text-color: #000000;
+	--border-color: rgb(168, 180, 215);
+	--card-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.574);
+	color-scheme: light;
+	font-family: "Geist", "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+}
+
+body {
+	background: linear-gradient(to bottom, rgb(240, 242, 251) 0%, rgb(234, 246, 250) 100%) fixed;
+	color: var(--text-color);
+}
+
+header {
+	width: 100%;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	gap: 10px;
+	padding: 16px;
+	font-size: 18px;
+	align-items: center;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+}
+
+#header-left {
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	justify-content: center;
+	gap: 10px;
+	text-decoration: none;
+}
+
+#header-title img {
+	width: 24px;
+	height: 24px;
+	border-radius: 4px;
+}
+main {
+	margin: auto;
+	max-width: 1000px;
+	padding: 0 16px;
+}
+.button-link {
+	text-decoration: none;
+	background-color: var(--card-background-color);
+	color: var(--card-text-color);
+	padding: 6px;
+	border-radius: 5px;
+	font-size: 16px;
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	transition: all 150ms;
+	font-weight: 600;
+	border: 2px solid rgba(255, 255, 255, 0);
+	backdrop-filter: blur(2px);
+}
+.button-link:hover {
+	border-color: var(--heading-text-color);
+}
+.button-link:active {
+	border-color: var(--text-color);
+}
+
+.button-link img,
+.button-link svg {
+	width: auto;
+	height: 24px;
+	fill: black;
+}
+
+section {
+	color: var(--text-color);
+	line-height: 1.3;
+	font-size: 1.2rem;
+}
+
+section p {
+	margin: 16px 0;
+}
+
+section ul {
+	margin: 16px 0;
+	padding-left: 20px;
+}
+
+section a {
+	color: rgb(37, 84, 225);
+}
+
+section a[target="_blank"]::after {
+	content: "";
+	background: url("/imgs/newtabblack.svg");
+	fill: rgb(37, 84, 225);
+	width: 16px;
+	height: 16px;
+	margin-left: 4px;
+	display: inline-block;
+	background-size: contain;
+	background-repeat: no-repeat;
+	color: rgb(77, 121, 255);
+	font-size: 1rem;
+	text-decoration: none;
+}
+
+ul ul {
+	margin: 0;
+}
+
+.only-dark {
+	display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--heading-text-color);
+	font-weight: 500;
+	line-height: 1;
+	text-transform: capitalize;
+}
+
+h1 {
+	font-size: 3.5rem;
+	margin-top: 36px;
+}
+
+h2 {
+	font-size: 2.8rem;
+}
+
+section h2 {
+	margin-top: 48px;
+	margin-bottom: 8px;
+}
+
+h3 {
+	font-size: 2.5rem;
+}
+
+h4 {
+	font-size: 2rem;
+}
+
+h5 {
+	font-size: 1.6rem;
+}
+
+h6 {
+	font-size: 1.25rem;
+}
+
+table {
+	margin: 16px auto;
+	background-color: var(--table-background-color);
+	border: 1px solid var(--border-color);
+	box-shadow: var(--card-shadow);
+	border-collapse: collapse;
+}
+
+th,
+td {
+	padding: 8px 16px;
+	border: 1px solid var(--border-color);
+}
+
+section > img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 8px;
+	margin: 16px auto;
+}
+
+.post-list {
+	margin: 20px auto;
+	display: grid;
+	grid-template: 1fr / repeat(auto-fill, minmax(300px, 1fr));
+	justify-content: center;
+}
+
+.post-link {
+	display: flex;
+	flex-direction: column;
+	border-radius: 8px;
+	overflow: hidden;
+	text-decoration: none;
+	color: inherit;
+	gap: 8px;
+	padding: 16px;
+	background-color: transparent;
+	transition: background-color 150ms, transform 150ms;
+}
+
+.post-link:hover {
+	/* transform: translateY(-2px); */
+	background-color: rgba(212, 219, 238, 0.5);
+}
+
+.post-link img {
+	width: 100%;
+	border-radius: 8px;
+	height: auto;
+	margin: 0;
+}
+
+.post-link p {
+	margin: 0;
+	font-size: 0.875rem;
+	color: var(--text-color);
+}
+
+::selection {
+	background-color: teal;
+	color: white;
+}
+
+.links {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+}
+
+.link {
+	text-decoration: none;
+	color: rgb(77, 121, 255);
+	font-weight: 600;
+	transition: color 150ms;
+	padding: 0 4px;
+}
+.link:hover {
+	text-decoration: underline solid rgb(77, 121, 255);
+}
+
+.link svg {
+	width: 12px;
+	height: 12px;
+}
+
+footer {
+	margin: 30px auto 8px auto;
+	padding: 16px;
+	text-align: center;
+}

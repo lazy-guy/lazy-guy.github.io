@@ -1,0 +1,25 @@
+---
+layout: blog
+---
+
+<section>
+	<h1>{{ title }}</h1>
+	<img src="{{ thumb | url }}" alt="Post thumbnail" width="2560" height="1440" />
+	<div class="links">
+		{% if weblink %}
+		<a href="{{ weblink | url }}" target="_blank" class="button-link">
+			<img src="/imgs/newtabblack.svg" alt="External link icon" width="16" height="16" />
+			Try it out
+		</a>
+		{% endif %}
+
+		{% if github %}
+		<a href="{{ github | url }}" target="_blank" class="button-link">
+			<img src="/imgs/GitHub-Mark-64px.png" alt="External link icon" width="16" height="16" />
+			View on GitHub
+		</a>
+		{% endif %}
+	</div>
+
+	{{ content | safe }}
+</section>

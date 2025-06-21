@@ -1,0 +1,22 @@
+---
+title: LazyGuy-_-'s Blog
+layout: blog
+---
+
+<h1>Blog Posts</h1>
+
+<div class="post-list">
+	{% for post in collections.post | reverse %}
+	<a href="{{ post.url | url }}" class="post-link">
+		<img
+			class="w-full m-0 rounded-t lazy"
+			src="{{ post.data.thumb | url }}"
+			width="960"
+			height="500"
+			alt="Post thumbnail"
+		/>
+		<h6>{{ post.data.title }}</h6>
+		<p title="Published date">{{ post.data.date | prettyDate }}</p>
+	</a>
+	{% endfor %}
+</div>
