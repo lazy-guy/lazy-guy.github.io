@@ -7,6 +7,10 @@ author: LazyGuy-_-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		{% if thumb %}
+		<meta property="og:image" content="{{ thumb | url }}" />
+		<meta name="twitter:image" content="{{ thumb | url }}" />
+		{% endif %}
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>{{ title }}</title>
