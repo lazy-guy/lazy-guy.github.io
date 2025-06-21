@@ -117,7 +117,8 @@ section.top-section::before {
 .profile-buttons {
 	width: 100%;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
 	gap: 10px;
@@ -222,4 +223,34 @@ section.top-section::before {
 	width: auto;
 	height: 24px;
 	fill: white;
+}
+
+footer a {
+	display: inline-block;
+	text-decoration: underline solid transparent;
+	color: rgb(116, 179, 255);
+	font-weight: 500;
+	transition: text-decoration 150ms;
+}
+
+footer a:hover {
+	text-decoration: underline solid rgb(77, 121, 255);
+}
+
+footer a::after {
+	content: "";
+	background: url("/imgs/newtab.svg");
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	background-size: contain;
+	background-repeat: no-repeat;
+	font-size: 1rem;
+	text-decoration: none;
+}
+
+footer {
+	margin: 30px auto 8px auto;
+	padding: 16px;
+	text-align: center;
 }

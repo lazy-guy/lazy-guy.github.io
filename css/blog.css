@@ -104,25 +104,6 @@ section ul {
 	padding-left: 20px;
 }
 
-section a {
-	color: rgb(37, 84, 225);
-}
-
-section a[target="_blank"]::after {
-	content: "";
-	background: url("/imgs/newtabblack.svg");
-	fill: rgb(37, 84, 225);
-	width: 16px;
-	height: 16px;
-	margin-left: 4px;
-	display: inline-block;
-	background-size: contain;
-	background-repeat: no-repeat;
-	color: rgb(77, 121, 255);
-	font-size: 1rem;
-	text-decoration: none;
-}
-
 ul ul {
 	margin: 0;
 }
@@ -144,12 +125,12 @@ h6 {
 }
 
 h1 {
-	font-size: 3.5rem;
+	font-size: 2.7rem;
 	margin-top: 36px;
 }
 
 h2 {
-	font-size: 2.8rem;
+	font-size: 2.2rem;
 }
 
 section h2 {
@@ -158,15 +139,15 @@ section h2 {
 }
 
 h3 {
-	font-size: 2.5rem;
-}
-
-h4 {
 	font-size: 2rem;
 }
 
+h4 {
+	font-size: 1.8rem;
+}
+
 h5 {
-	font-size: 1.6rem;
+	font-size: 1.5rem;
 }
 
 h6 {
@@ -243,15 +224,28 @@ section > img {
 	gap: 10px;
 }
 
-.link {
-	text-decoration: none;
+.link, section a:not(.button-link) {
+	text-decoration: underline solid transparent;
 	color: rgb(77, 121, 255);
-	font-weight: 600;
-	transition: color 150ms;
-	padding: 0 4px;
+	font-weight: 500;
+	transition: text-decoration 150ms;
 }
-.link:hover {
+.link:hover, section a:not(.button-link):hover {
 	text-decoration: underline solid rgb(77, 121, 255);
+}
+
+section a:not(.button-link)::after, .link::after {
+	content: "";
+	background: url("/imgs/newtabblack.svg");
+	fill: rgb(37, 84, 225);
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	background-size: contain;
+	background-repeat: no-repeat;
+	color: rgb(77, 121, 255);
+	font-size: 1rem;
+	text-decoration: none;
 }
 
 .link svg {
