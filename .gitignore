@@ -2,4 +2,3 @@ node_modules
 _site
 
 package-lock.json
-pnpm-lock.yaml
