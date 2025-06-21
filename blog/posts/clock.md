@@ -4,6 +4,7 @@ layout: blogpost
 permalink: /blog/clock/
 tags: post
 thumb: /imgs/clock-nojs.png
+preview: https://lazy-guy.github.io/imgs/clock-nojs.png
 date: 2025-06-21
 weblink: https://clock-nojs.vercel.app/
 github: https://github.com/lazy-guy/clock-nojs/

@@ -7,9 +7,9 @@ author: LazyGuy-_-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		{% if thumb %}
-		<meta property="og:image" content="{{ thumb | url }}" />
-		<meta name="twitter:image" content="{{ thumb | url }}" />
+		{% if preview %}
+		<meta property="og:image" content="{{ preview | url }}" />
+		<meta name="twitter:image" content="{{ preview | url }}" />
 		{% endif %}
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
