@@ -1,15 +1,14 @@
 {
-  "name": "blog",
+  "name": "lazy-guy-personal-website",
   "version": "1.0.0",
-  "description": "",
+  "description": "LazyGuy-_-'s personal website and blog built with 11ty",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "lazy-guy",
   "license": "ISC",
-  "packageManager": "pnpm@10.12.1",
   "dependencies": {
     "@11ty/eleventy": "^3.1.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.1"
