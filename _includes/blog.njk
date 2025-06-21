@@ -2,6 +2,7 @@
 title: LazyGuy-_-'s Blog
 description: A personal blog about technology, programming, and life.
 author: LazyGuy-_-
+blogpreview: https://lazy-guy.github.io/imgs/blog.png
 ---
 
 <!DOCTYPE html>
@@ -10,6 +11,14 @@ author: LazyGuy-_-
 		{% if preview %}
 		<meta property="og:image" content="{{ preview | url }}" />
 		<meta name="twitter:image" content="{{ preview | url }}" />
+		{% else %}
+		<meta property="og:image" content="{{ blogpreview | url }}" />
+		<meta name="twitter:image" content="{{ blogpreview | url }}" />
+		{% endif %}
+		{% if description %}
+		<meta name="description" content="{{ description }}" />
+		{% else %}
+		<meta name="description" content="A personal blog about technology." />
 		{% endif %}
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />

@@ -1,5 +1,6 @@
 ---
 title: Creating a timezone-aware clock without any JS
+description: Creating a timezone-aware clock without any JavaScript, using IP address geolocation.
 layout: blogpost
 permalink: /blog/clock/
 tags: post
