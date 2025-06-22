@@ -176,10 +176,8 @@ async def showtime(request: Request):
 
     return templates.TemplateResponse(
         request=request,
-        name="index.html",
+        name="mytemplate.html",
         context={
-            "timezones": all_timezones,
-            "selected": clientTimezone,
             "secondHandDelay": secondHandDelay,
             "minuteHandDelay": minuteHandDelay,
             "hourHandDelay": hourHandDelay,
