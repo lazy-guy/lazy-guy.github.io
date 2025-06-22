@@ -88,17 +88,17 @@ For Jinja2, it will look something like this:
 ```css
 #secondhand {
 	animation: clockspin 60s linear infinite;
-	animation-delay: -{{ secondHandDelay }}s;
+	animation-delay: -{{'{{ secondHandDelay }}'}}s;
 }
 
 #minutehand {
 	animation: clockspin 3600s linear infinite;
-	animation-delay: -{{ minuteHandDelay }}s;
+	animation-delay: -{{'{{ minuteHandDelay }}'}}s;
 }
 
 #hourhand {
 	animation: clockspin 43200s linear infinite;
-	animation-delay: -{{ hourHandDelay }}s;
+	animation-delay: -{{'{{ hourHandDelay }}'}}s;
 }
 ```
 
