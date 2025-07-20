@@ -4,10 +4,14 @@
 	box-sizing: border-box;
 }
 
+@view-transition {
+	navigation: auto;
+}
+
 :root {
 	--background-color: #ffffff;
 	--card-background-color: rgba(212, 219, 238, 0.821);
-	--table-background-color: rgba(223, 224, 236, 0);
+	--table-background-color: rgb(238, 240, 247);
 	--card-text-color: #333333;
 	--heading-text-color: #333333;
 	--text-color: #000000;
@@ -17,6 +21,8 @@
 	font-family: "Geist", "Helvetica Neue", Arial, Helvetica, sans-serif;
 	font-optical-sizing: auto;
 	font-style: normal;
+	scroll-timeline: --progress y;
+	overflow-y: scroll;
 }
 
 body {
@@ -155,17 +161,33 @@ h6 {
 }
 
 table {
-	margin: 16px auto;
+	margin: 24px auto;
 	background-color: var(--table-background-color);
 	border: 1px solid var(--border-color);
 	box-shadow: var(--card-shadow);
-	border-collapse: collapse;
+	border-radius: 5px;
 }
 
 th,
 td {
 	padding: 8px 16px;
 	border: 1px solid var(--border-color);
+}
+
+tr:first-child td:first-child, tr:first-child th:first-child {
+	border-top-left-radius: 5px;
+}
+
+tr:first-child td:last-child, tr:first-child th:last-child {
+	border-top-right-radius: 5px;
+}
+
+tr:last-child td:first-child {
+	border-bottom-left-radius: 5px;
+}
+
+tr:last-child td:last-child {
+	border-bottom-right-radius: 5px;
 }
 
 section > img {
@@ -257,4 +279,35 @@ footer {
 	margin: 30px auto 8px auto;
 	padding: 16px;
 	text-align: center;
+}
+
+#progress-bar {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 0vw;
+	height: 8px;
+	z-index: 99;
+	background-color: royalblue;
+	animation-name: progressAnimation;
+	animation-duration: 1ms;
+	animation-timeline: --progress;
+	animation-timing-function: linear;
+	border-radius: 25px;
+}
+
+@keyframes progressAnimation {
+  0% {
+    width: 0vw;
+  }
+
+  100% {
+    width: 100vw;
+  }
+}
+
+@media (prefers-reduced-motion) {
+	#progress-bar {
+		animation: none;
+	}
 }
