@@ -23,6 +23,7 @@ blogpreview: https://lazy-guy.github.io/imgs/blog.png
 		{% endif %}
 		<meta charset="UTF-8" />
 		<meta property="og:title" content="{{title}}" />
+		<meta property="og:site_name" content="LazyGuy-_-'s Website" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>{{ title }}</title>
 		<link rel="stylesheet" href="/blog.css" />
@@ -32,9 +33,26 @@ blogpreview: https://lazy-guy.github.io/imgs/blog.png
 		<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="/css/prism-vs.css">
 		<link rel="stylesheet" href="/css/blog.css">
-		<style>
-			
-		</style>
+		<script type="application/ld+json">
+			{
+			"@context": "https://schema.org",
+			"@type": {% if tags %} "BlogPosting" {% else %} "Blog" {% endif %},
+			"headline": "{{ title }}",
+			"description": "{{ description }}",
+			"image": [
+				{% if preview %}
+				"{{ preview | url }}"
+				{% else %}
+				"{{ blogpreview | url }}"
+				{% endif %}
+			],
+			"author": [{
+				"@type": "Person",
+				"name": "Madhur Saini",
+				"url": "https://www.linkedin.com/in/madhursaini"
+				}]
+			}
+		</script>
 	</head>
 	<body>
 		<header>
