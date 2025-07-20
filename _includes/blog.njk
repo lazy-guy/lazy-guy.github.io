@@ -17,6 +17,7 @@ blogpreview: https://lazy-guy.github.io/imgs/blog.png
 		{% endif %}
 		{% if description %}
 		<meta name="description" content="{{ description }}" />
+		<meta property="og:description" content="{{ description }}" />
 		{% else %}
 		<meta name="description" content="A personal blog about technology." />
 		{% endif %}
