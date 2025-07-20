@@ -1,11 +1,13 @@
 ---
-title: Training a tiny Llama model to play chess
+title: Chess Llama - Training a tiny Llama model to play chess
+description: We trained a tiny Llama model from scratch just to play chess!
 layout: blogpost
 permalink: /blog/chessllama/
 tags: post
 thumb: /imgs/chess.png
 date: 2025-07-19
 weblink: /chess-llama
+preview: https://lazy-guy.github.io/imgs/chess.png
 github: https://github.com/lazy-guy/chess-llama
 ---
 
