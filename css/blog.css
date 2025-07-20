@@ -42,6 +42,7 @@ header {
 	position: sticky;
 	top: 0;
 	z-index: 1000;
+	pointer-events: none;
 }
 
 #header-left {
@@ -51,6 +52,11 @@ header {
 	justify-content: center;
 	gap: 10px;
 	text-decoration: none;
+	pointer-events: all;
+}
+
+header > a {
+	pointer-events: all;
 }
 
 #header-title img {
